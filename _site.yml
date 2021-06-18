@@ -3,6 +3,7 @@ title: "iyo-distill"
 description: |
   iyo-distill
 output_dir: "docs"
+theme: iyo.css
 navbar:
   right:
     - text: "Home"
