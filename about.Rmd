@@ -11,7 +11,7 @@ links:
   - label: Email
     url: "mailto:mschaeferliteracy@gmail.com"
 output:
-  postcards::jolla_blue
+  postcards::jolla
 ---
  
 I am a researcher hoping to better understand how to support literacy acquisition and development. In my PhD, which is a longitudinal project, I examine phonological processing skills and how they support literacy in children's first and additional language. I have also worked on the Early Grade Reading Studies in South Africa.
