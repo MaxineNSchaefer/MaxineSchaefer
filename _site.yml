@@ -1,7 +1,7 @@
 name: "."
 title: "Maxine Schaefer"
 description: |
-  iyo-distill
+  Maxine Schaefer
 output_dir: "docs"
 theme: iyo.css
 navbar:
