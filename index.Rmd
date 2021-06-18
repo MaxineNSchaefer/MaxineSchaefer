@@ -1,15 +1,15 @@
 ---
 title: "Maxine Schaefer"
 site: distill::distill_website
-image: "maxine.jpg"
+image: "images/maxine.jpg"
 links:
-  - label: LinkedIn
+  - label: '`r fontawesome::fa("linkedin")`'
     url: "https://www.linkedin.com/in/maxine-schaefer/"
-  - label: Twitter
+  - label: '`r fontawesome::fa("twitter")`'
     url: "https://twitter.com/MaxineNSchaefer"
-  - label: GitHub
+  - label: '`r fontawesome::fa("github")`'
     url: "https://github.com/MaxineNSchaefer"
-  - label: Email
+  - label: '`r fontawesome::fa("envelope")`'
     url: "mailto:mschaeferliteracy@gmail.com"
 output:
   postcards::jolla
