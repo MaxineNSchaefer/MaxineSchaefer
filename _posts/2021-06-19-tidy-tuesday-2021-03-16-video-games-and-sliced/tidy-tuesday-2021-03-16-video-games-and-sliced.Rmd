@@ -1,0 +1,40 @@
+---
+title: "Tidy Tuesday 2021-03-16: Video Games and Sliced"
+description: |
+  For my first independent attempt at TidyTuesday I tackled a subject close to my husband's heart: Dota 2.
+author:
+  - name: Maxine Schaefer
+    url: {}
+date: 06-19-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+I recently attended a guided TidyTuesday hosted by RLadies Freiburg and wanted to apply what I had learned to a new data set. I went to the TidyTuesday Github repo. Once there I found the [Video Games and Sliced]((https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-03-16)) dataset. This dataset looked interesting to me because (1) it was about gaming which is a topic often spoken about in my household, and (2) it was a relatively small dataset containing only seven variables. 
+
+In this post, I'll first give a narrative summary of what I did. I include all the code and the final visualisation at the end of the post. You can find all the code at the [TidyTuesday repo on Github](https://github.com/MaxineNSchaefer/tidytuesday).
+
+First, load packages with `library()`. I loaded `{tidyverse}` and `{tidytuesdayR}`. I downloaded the data from Github using `{tidytuesdayR}` as indicated in the repo that contains the data. I soon realised you cannot keep downloading the data from online so I saved the data to a .csv file.
+
+```{r eval = FALSE, message = FALSE}
+# libraries
+library(tidytuesdayR) # only to initially download data
+library(tidyverse)
+library(ggdark) # for dark minimal theme
+
+# data
+tuesdata <- tidytuesdayR::tt_load('2021-03-16')
+dat <- tuesdata$games
+
+write_csv(dat, "data.csv") # save data for later use
+dat <- read_csv("data.csv") # load in data so don't need to use tidytuesdayR
+```
+
+I next peaked at the data using `View()` and 
+

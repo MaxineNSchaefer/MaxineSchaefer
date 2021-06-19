@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/",
+    "title": "Tidy Tuesday 2021-03-16: Video Games and Sliced",
+    "description": "For my first independent attempt at TidyTuesday I tackled a subject close to my husband's heart: Dota 2.",
+    "author": [
+      {
+        "name": "Maxine Schaefer",
+        "url": {}
+      }
+    ],
+    "date": "2021-06-19",
+    "categories": [],
+    "contents": "\r\nI recently attended a guided TidyTuesday hosted by RLadies Freiburg and wanted to apply what I had learned to a new data set. I went to the TidyTuesday Github repo. Once there I found the Video Games and Sliced dataset. This dataset looked interesting to me because (1) it was about gaming which is a topic often spoken about in my household, and (2) it was a relatively small dataset containing only seven variables.\r\nIn this post, I’ll first give a narrative summary of what I did. I include all the code and the final visualisation at the end of the post. You can find all the code at the TidyTuesday repo on Github.\r\nFirst, I downloaded the data from Github using {tidytuesdayR} as indicated in the repo that contains the data. I soon realised you cannot keep downloading the data from online so I saved the data to a .csv file.\r\n\r\n\r\ntuesdata <- tidytuesdayR::tt_load('2021-03-16')\r\n\r\ndat <- tuesdata$games\r\n\r\nwrite_csv(dat, \"data.csv\")\r\n\r\ndat <- read_csv(\"data.csv\")\r\n\r\n\r\n\r\nI next peaked at the data using View() and\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-06-19T20:23:22+02:00",
+    "input_file": "tidy-tuesday-2021-03-16-video-games-and-sliced.knit.md"
+  },
+  {
     "path": "posts/2021-06-18-welcome/",
     "title": "Welcome",
     "description": "Introducing myself.",
