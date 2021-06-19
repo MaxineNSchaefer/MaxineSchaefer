@@ -15,6 +15,7 @@
       <description>For my first independent attempt at TidyTuesday I tackled a subject close to my husband's heart: Dota 2.</description>
       <guid>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced</guid>
       <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/final_plot.png" medium="image" type="image/png" width="2100" height="2100"/>
     </item>
     <item>
       <title>Welcome</title>
@@ -22,7 +23,8 @@
       <link>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-18-welcome</link>
       <description>Introducing myself.</description>
       <guid>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-18-welcome</guid>
-      <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-18-welcome/hogsback.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
