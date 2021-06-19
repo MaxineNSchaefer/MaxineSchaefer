@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["tidy-tuesday-2021-03-16-video-games-and-sliced_files/anchor-4.2.2/anchor.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/bowser-1.9.3/bowser.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/distill-2.2.21/template.v2.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/header-attrs-2.9/header-attrs.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/jquery-1.11.3/jquery.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/popper-2.6.0/popper.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy-bundle.umd.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy-light-border.css","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy.css","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy.umd.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["final_plot.png","tidy-tuesday-2021-03-16-video-games-and-sliced_files/anchor-4.2.2/anchor.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/bowser-1.9.3/bowser.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/distill-2.2.21/template.v2.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/header-attrs-2.9/header-attrs.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/jquery-1.11.3/jquery.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/popper-2.6.0/popper.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy-bundle.umd.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy-light-border.css","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy.css","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy.umd.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1479,20 +1479,109 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-article">
 <p>I recently attended a guided TidyTuesday hosted by RLadies Freiburg and wanted to apply what I had learned to a new data set. I went to the TidyTuesday Github repo. Once there I found the <a href="(https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-03-16)">Video Games and Sliced</a> dataset. This dataset looked interesting to me because (1) it was about gaming which is a topic often spoken about in my household, and (2) it was a relatively small dataset containing only seven variables.</p>
 <p>In this post, I’ll first give a narrative summary of what I did. I include all the code and the final visualisation at the end of the post. You can find all the code at the <a href="https://github.com/MaxineNSchaefer/tidytuesday">TidyTuesday repo on Github</a>.</p>
-<p>First, I downloaded the data from Github using <code>{tidytuesdayR}</code> as indicated in the repo that contains the data. I soon realised you cannot keep downloading the data from online so I saved the data to a .csv file.</p>
+<p>First, load packages with <code>library()</code>. I loaded <code>{tidyverse}</code> and <code>{tidytuesdayR}</code>. I downloaded the data from Github using <code>{tidytuesdayR}</code> as indicated in the repo that contains the data. I soon realised you cannot keep downloading the data from online so I saved the data to a .csv file.</p>
+<p>I next peaked at the data using <code>View()</code>. This function shows you the data in the dataviewer. However, one also needs to summarise the data to see what one is working with. I used <code>skim()</code> from <code>{skimr}</code> for this overview. I also noted the data type of each variable.</p>
+<p>I decided to focus on Dota 2 because this is a game my husband loves to play. I also wanted to look at the peak number of players per month and how this changed over a year. I decided on 2019 since it was the last ‘normal’ year, and because I remember having the chance to open some of the prizes in my husband’s Battle Pass before The International. For those who don’t know, The International is the main and largest competition of the Dota 2 season each year. Thus, for my visualisation I added some data on the start and end dates of TI, and included the value of the total prize pool.</p>
+<p><strong>What did I find? Peak player numbers do go up during TI, but do not reach the peak number of players in March.</strong></p>
+<figure>
+<img src="final_plot.png" alt="Peak number (in thousands) of D0ta 2 players in 2019" /><figcaption aria-hidden="true">Peak number (in thousands) of D0ta 2 players in 2019</figcaption>
+</figure>
+<p>In keeping with the Dota 2 ‘feel’ I made the visualisation dark. I even asked my husband, Mark, for some tips to make it feel more like Dota 2. We ended up with red as the colour. I am not sure I am in love with it, but I’m still proud of my first TidyTuesday attempt.</p>
+<p>Here’s the code to make the plot.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>tuesdata</span> <span class='op'>&lt;-</span> <span class='fu'>tidytuesdayR</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/tidytuesdayR/man/tt_load.html'>tt_load</a></span><span class='op'>(</span><span class='st'>'2021-03-16'</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># libraries</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/thebioengineer/tidytuesdayR'>tidytuesdayR</a></span><span class='op'>)</span> <span class='co'># only to initially download data</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>ggdark</span><span class='op'>)</span> <span class='co'># for dark minimal theme</span>
 
+<span class='co'># Download and save data</span>
+<span class='va'>tuesdata</span> <span class='op'>&lt;-</span> <span class='fu'>tidytuesdayR</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/tidytuesdayR/man/tt_load.html'>tt_load</a></span><span class='op'>(</span><span class='st'>'2021-03-16'</span><span class='op'>)</span>
 <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>tuesdata</span><span class='op'>$</span><span class='va'>games</span>
 
-<span class='fu'>write_csv</span><span class='op'>(</span><span class='va'>dat</span>, <span class='st'>"data.csv"</span><span class='op'>)</span>
+<span class='co'># Check out the data</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/View.html'>View</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'>skimr</span><span class='fu'>::</span><span class='fu'><a href='https://docs.ropensci.org/skimr/reference/skim.html'>skim</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span>
 
-<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data.csv"</span><span class='op'>)</span>
+<span class='co'># TI start and end</span>
+<span class='va'>TIstart</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='fl'>7</span><span class='op'>/</span><span class='fl'>30</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>7</span> <span class='co'># TI starts 7 of July, convert the 7th day into a decimal and add to 7th month</span>
+<span class='va'>TIend</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='fl'>26</span><span class='op'>/</span><span class='fl'>30</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>8</span> <span class='co'># TI ends 26 Aug, convert the 26th day into a decimal and add to 8th month</span>
+
+<span class='co'># Generate graph</span>
+
+<span class='va'>p_final</span> <span class='op'>&lt;-</span> 
+  
+  <span class='co'># get data ready</span>
+ <span class='va'>dat</span> <span class='op'>%&gt;%</span> 
+  
+  <span class='co'># filter data to include only Dota 2 for 2019</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>gamename</span> <span class='op'>==</span> <span class='st'>"Dota 2"</span>, <span class='co'># keep only Dota 2</span>
+         <span class='va'>year</span> <span class='op'>==</span> <span class='fl'>2019</span><span class='op'>)</span> <span class='op'>%&gt;%</span>     <span class='co'># keep only year 2019</span>
+  
+  <span class='co'># make axis more readable</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>peak_in_thousands <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>peak</span><span class='op'>/</span><span class='fl'>1000</span><span class='op'>)</span>, <span class='fl'>0</span> <span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'># reduce numbers on the graph by dividing by 1000</span>
+  
+  <span class='co'># convert months to numbers so that the months are listed in order in the graph</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>month <span class='op'>=</span> <span class='fu'>case_when</span><span class='op'>(</span>   
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"January"</span> <span class='op'>~</span> <span class='fl'>1</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"February"</span> <span class='op'>~</span> <span class='fl'>2</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"March"</span> <span class='op'>~</span> <span class='fl'>3</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"April"</span> <span class='op'>~</span> <span class='fl'>4</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"May"</span> <span class='op'>~</span> <span class='fl'>5</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"June"</span> <span class='op'>~</span> <span class='fl'>6</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"July"</span> <span class='op'>~</span> <span class='fl'>7</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"August"</span> <span class='op'>~</span> <span class='fl'>8</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"September"</span> <span class='op'>~</span> <span class='fl'>9</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"October"</span> <span class='op'>~</span> <span class='fl'>10</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"November"</span> <span class='op'>~</span> <span class='fl'>11</span>,
+    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"December"</span> <span class='op'>~</span> <span class='fl'>12</span>
+  <span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>mutate</span><span class='op'>(</span>month <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>month</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>  <span class='co'># convert to numeric so that the months will be listed in order</span>
+
+
+<span class='co'># base graph</span>
+ <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>month</span>, y <span class='op'>=</span> <span class='va'>peak_in_thousands</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> 
+  <span class='fu'>geom_point</span><span class='op'>(</span>shape <span class='op'>=</span> <span class='fl'>17</span>, size <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add points</span>
+  <span class='fu'>geom_line</span><span class='op'>(</span>linetype <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add lines to join points</span>
+  
+  <span class='co'># add labels</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Month in 2019"</span>,  
+       y <span class='op'>=</span> <span class='st'>"Peak number of players in thousands"</span>,
+       title <span class='op'>=</span> <span class='st'>"PEAK NUMBER OF DOTA 2 PLAYERS"</span>,
+       subtitle <span class='op'>=</span> <span class='st'>"per month in 2019"</span>, 
+       caption <span class='op'>=</span> <span class='st'>"Data source: TidyTuesday 2021-03-16
+       @MaxineNSchaefer"</span><span class='op'>)</span> <span class='op'>+</span>
+  
+  <span class='co'># fix axis breaks and limits</span>
+  <span class='fu'>scale_x_continuous</span><span class='op'>(</span>n.breaks <span class='op'>=</span> <span class='fl'>12</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># have a break for each month</span>
+  <span class='fu'>scale_y_continuous</span><span class='op'>(</span>limits <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>1100</span><span class='op'>)</span>, breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>100</span>, <span class='fl'>200</span>, <span class='fl'>300</span>, <span class='fl'>400</span>, <span class='fl'>500</span>, <span class='fl'>600</span>, <span class='fl'>700</span>, <span class='fl'>800</span>, <span class='fl'>900</span>, <span class='fl'>1000</span>, <span class='fl'>1100</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># start at 0</span>
+  
+  <span class='co'># add start and end dates of The International which I got from https://liquipedia.net/dota2/The_International/2019#Viewership_Stats</span>
+  <span class='fu'>geom_vline</span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='va'>TIstart</span>, color <span class='op'>=</span> <span class='st'>"#cc0000"</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add start date and color using Dota 2 colour</span>
+  <span class='fu'>geom_vline</span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='va'>TIend</span>, color <span class='op'>=</span> <span class='st'>"#cc0000"</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add end date and color using Dota 2 colour</span>
+  
+    <span class='co'># add label for TI, and prize pool</span>
+  <span class='fu'>annotate</span><span class='op'>(</span>geom<span class='op'>=</span><span class='st'>"text"</span>, x<span class='op'>=</span><span class='fl'>8</span>, y<span class='op'>=</span><span class='fl'>450</span>, label<span class='op'>=</span><span class='st'>"TI 9"</span>, color<span class='op'>=</span><span class='st'>"#cc0000"</span>, size <span class='op'>=</span> <span class='fl'>6</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add text to graph </span>
+  <span class='fu'>annotate</span><span class='op'>(</span>geom<span class='op'>=</span><span class='st'>"text"</span>, x<span class='op'>=</span><span class='fl'>10</span>, y<span class='op'>=</span><span class='fl'>450</span>, label<span class='op'>=</span> <span class='co'># add text to indicate prize pool value</span>
+  <span class='st'>"Prize pool
+  34.33 mil USD"</span>, color<span class='op'>=</span><span class='st'>"#cc0000"</span>, size <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span> <span class='op'>+</span>
+  
+  <span class='co'># edit theme</span>
+<span class='fu'><a href='https://rdrr.io/pkg/ggdark/man/ggdarktheme.html'>dark_theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add basic dark theme from {ggdark}</span>
+  
+  <span class='co'># edit theme to match Dota 2 colours more or less</span>
+  <span class='fu'>theme</span><span class='op'>(</span>axis.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"#b22222"</span>, face <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span>,
+        plot.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>20</span>, colour <span class='op'>=</span> <span class='st'>"#cc0000"</span>, face <span class='op'>=</span> <span class='st'>"bold"</span>, family <span class='op'>=</span> <span class='st'>"serif"</span><span class='op'>)</span>, <span class='co'>#change the font for the title</span>
+        plot.subtitle <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"#cc0000"</span><span class='op'>)</span>,
+        plot.caption <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"#b22222"</span><span class='op'>)</span>,
+        axis.text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"#b22222"</span><span class='op'>)</span>,
+        panel.grid.major <span class='op'>=</span> <span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>, <span class='co'># remove grid lines</span>
+        panel.grid.minor <span class='op'>=</span> <span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>  <span class='co'># remove grid lines</span>
+
+<span class='va'>p_final</span>
+<span class='co'># ggsave("final_plot.png")</span>
 </code></pre>
 </div>
 </div>
-<p>I next peaked at the data using <code>View()</code> and</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
