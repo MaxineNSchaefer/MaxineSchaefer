@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Maxine Schaefer</title>
+    <link>https://maxinenschaefer.github.io/MaxineSchaefer</link>
+    <atom:link href="https://maxinenschaefer.github.io/MaxineSchaefer/blog.xml" rel="self" type="application/rss+xml"/>
+    <description>Researcher interested in phonological processing and literacy development, R and open science
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Tidy Tuesday 2021-03-16: Video Games and Sliced</title>
+      <dc:creator>Maxine Schaefer</dc:creator>
+      <link>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced</link>
+      <description>For my first independent attempt at TidyTuesday I tackled a subject close to my husband's heart: Dota 2.</description>
+      <guid>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced</guid>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Welcome</title>
+      <dc:creator>Maxine Schaefer</dc:creator>
+      <link>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-18-welcome</link>
+      <description>Introducing myself.</description>
+      <guid>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-18-welcome</guid>
+      <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -2,7 +2,13 @@ name: "MaxineSchaefer"
 title: "Maxine Schaefer"
 creative_commons: CC BY
 description: |
-  Maxine Schaefer
+  Researcher interested in phonological processing and literacy development, R and open science
+base_url: https://maxinenschaefer.github.io/MaxineSchaefer
+source_url: https://github.com/MaxineNSchaefer/MaxineSchaefer
+collections:
+  posts:
+    disqus: maxine-n-schaefer
+    share: [twitter, linkedin]
 output_dir: "docs"
 theme: iyo.css
 navbar:
