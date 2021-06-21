@@ -9,6 +9,8 @@ links:
     url: "https://twitter.com/MaxineNSchaefer"
   - label: '`r fontawesome::fa("github")`'
     url: "https://github.com/MaxineNSchaefer"
+  - label: OSF
+    url: "https://osf.io/598gt/"    
   - label: '`r fontawesome::fa("envelope")`'
     url: "mailto:mschaeferliteracy@gmail.com"
 output:
