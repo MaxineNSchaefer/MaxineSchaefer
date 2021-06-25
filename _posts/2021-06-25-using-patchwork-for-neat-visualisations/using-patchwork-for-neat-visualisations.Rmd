@@ -104,6 +104,7 @@ sim_data_long <- sim_data %>%
   pivot_longer(3:7, names_to = "task", values_to = "score") %>%   # change to long format
   separate(col = task, into = c("tasklang", "task"), sep = "_", extra = "merge") %>%  # separate language of administration from task
   mutate(across(c(language, tasklang,task), as_factor)) # change character variables into factors
+head(sim_data_long)
          
 ```
 
