@@ -29,7 +29,7 @@ I decided to focus on Dota 2 because this is a game my husband loves to play. I 
 
 **What did I find? Peak player numbers do go up during TI, but do not reach the peak number of players in March.**
 
-![Peak number (in thousands) of D0ta 2 players in 2019](final_plot.png)
+![Peak number (in thousands) of Dota 2 players in 2019](final_plot.png)
 
 In keeping with the Dota 2 'feel' I made the visualisation dark. I even asked my husband, Mark, for some tips to make it feel more like Dota 2. We ended up with red as the colour. I am not sure I am in love with it, but I'm still proud of my first TidyTuesday attempt. 
 

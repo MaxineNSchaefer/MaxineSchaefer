@@ -85,55 +85,55 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Maxine Schaefer: Tidy Tuesday 2021-03-16: Video Games and Sliced</title>
+<title>Maxine Schaefer: Using {patchwork} for neat visualisations</title>
 
-<meta property="description" itemprop="description" content="For my first independent attempt at TidyTuesday I tackled a subject close to my husband&#39;s heart: Dota 2."/>
+<meta property="description" itemprop="description" content="I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings."/>
 
-<link rel="canonical" href="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/"/>
+<link rel="canonical" href="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/"/>
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-06-19"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-06-19"/>
+<meta property="article:published" itemprop="datePublished" content="2021-06-25"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-06-25"/>
 <meta name="article:author" content="Maxine Schaefer"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Maxine Schaefer: Tidy Tuesday 2021-03-16: Video Games and Sliced"/>
+<meta property="og:title" content="Maxine Schaefer: Using {patchwork} for neat visualisations"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="For my first independent attempt at TidyTuesday I tackled a subject close to my husband&#39;s heart: Dota 2."/>
-<meta property="og:url" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/"/>
-<meta property="og:image" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/final_plot.png"/>
-<meta property="og:image:width" content="2100"/>
-<meta property="og:image:height" content="2100"/>
+<meta property="og:description" content="I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings."/>
+<meta property="og:url" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/"/>
+<meta property="og:image" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/density_ran.png"/>
+<meta property="og:image:width" content="2125"/>
+<meta property="og:image:height" content="1417"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Maxine Schaefer"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Maxine Schaefer: Tidy Tuesday 2021-03-16: Video Games and Sliced"/>
-<meta property="twitter:description" content="For my first independent attempt at TidyTuesday I tackled a subject close to my husband&#39;s heart: Dota 2."/>
-<meta property="twitter:url" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/"/>
-<meta property="twitter:image" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/final_plot.png"/>
-<meta property="twitter:image:width" content="2100"/>
-<meta property="twitter:image:height" content="2100"/>
+<meta property="twitter:title" content="Maxine Schaefer: Using {patchwork} for neat visualisations"/>
+<meta property="twitter:description" content="I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings."/>
+<meta property="twitter:url" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/"/>
+<meta property="twitter:image" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/density_ran.png"/>
+<meta property="twitter:image:width" content="2125"/>
+<meta property="twitter:image:height" content="1417"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="Maxine Schaefer: Tidy Tuesday 2021-03-16: Video Games and Sliced"/>
-<meta name="citation_fulltext_html_url" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/"/>
+<meta name="citation_title" content="Maxine Schaefer: Using {patchwork} for neat visualisations"/>
+<meta name="citation_fulltext_html_url" content="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/"/>
 <meta name="citation_fulltext_world_readable" content=""/>
-<meta name="citation_online_date" content="2021/06/19"/>
-<meta name="citation_publication_date" content="2021/06/19"/>
+<meta name="citation_online_date" content="2021/06/25"/>
+<meta name="citation_publication_date" content="2021/06/25"/>
 <meta name="citation_author" content="Maxine Schaefer"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Tidy Tuesday 2021-03-16: Video Games and Sliced"]},{"type":"character","attributes":{},"value":["For my first independent attempt at TidyTuesday I tackled a subject close to my husband's heart: Dota 2."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxine Schaefer"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["06-19-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float","number_sections","theme","df_print"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["readable"]},{"type":"character","attributes":{},"value":["kable"]}]}]},{"type":"character","attributes":{},"value":["final_plot.png"]},{"type":"character","attributes":{},"value":["https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/"]},{"type":"character","attributes":{},"value":["https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Using {patchwork} for neat visualisations"]},{"type":"character","attributes":{},"value":["I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxine Schaefer"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["06-25-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float","number_sections","theme","df_print"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["readable"]},{"type":"character","attributes":{},"value":["kable"]}]}]},{"type":"character","attributes":{},"value":["density_ran.png"]},{"type":"character","attributes":{},"value":["https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/"]},{"type":"character","attributes":{},"value":["https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["final_plot.png","tidy-tuesday-2021-03-16-video-games-and-sliced_files/anchor-4.2.2/anchor.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/bowser-1.9.3/bowser.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/distill-2.2.21/template.v2.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/header-attrs-2.9/header-attrs.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/jquery-1.11.3/jquery.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/popper-2.6.0/popper.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy-bundle.umd.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy-light-border.css","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy.css","tidy-tuesday-2021-03-16-video-games-and-sliced_files/tippy-6.2.7/tippy.umd.min.js","tidy-tuesday-2021-03-16-video-games-and-sliced_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["density_ran.png","using-patchwork-for-neat-visualisations_files/anchor-4.2.2/anchor.min.js","using-patchwork-for-neat-visualisations_files/bowser-1.9.3/bowser.min.js","using-patchwork-for-neat-visualisations_files/distill-2.2.21/template.v2.js","using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-10-1.png","using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-11-1.png","using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-5-1.png","using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-6-1.png","using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-7-1.png","using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-8-1.png","using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-9-1.png","using-patchwork-for-neat-visualisations_files/header-attrs-2.9/header-attrs.js","using-patchwork-for-neat-visualisations_files/jquery-1.11.3/jquery.min.js","using-patchwork-for-neat-visualisations_files/popper-2.6.0/popper.min.js","using-patchwork-for-neat-visualisations_files/tippy-6.2.7/tippy-bundle.umd.min.js","using-patchwork-for-neat-visualisations_files/tippy-6.2.7/tippy-light-border.css","using-patchwork-for-neat-visualisations_files/tippy-6.2.7/tippy.css","using-patchwork-for-neat-visualisations_files/tippy-6.2.7/tippy.umd.min.js","using-patchwork-for-neat-visualisations_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2388,7 +2388,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Tidy Tuesday 2021-03-16: Video Games and Sliced","description":"For my first independent attempt at TidyTuesday I tackled a subject close to my husband's heart: Dota 2.","authors":[{"author":"Maxine Schaefer","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-19T00:00:00.000+02:00","citationText":"Schaefer, 2021"}
+{"title":"Using {patchwork} for neat visualisations","description":"I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings.","authors":[{"author":"Maxine Schaefer","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-06-25T00:00:00.000+02:00","citationText":"Schaefer, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2413,139 +2413,296 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Tidy Tuesday 2021-03-16: Video Games and Sliced</h1>
+<h1>Using {patchwork} for neat visualisations</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>For my first independent attempt at TidyTuesday I tackled a subject close to my husband’s heart: Dota 2.</p></p>
+<p><p>I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings.</p></p>
 </div>
 
 <div class="d-byline">
   Maxine Schaefer true 
   
-<br/>06-19-2021
+<br/>06-25-2021
 </div>
 
 <div class="d-article">
-<p>I recently attended a guided TidyTuesday hosted by RLadies Freiburg and wanted to apply what I had learned to a new data set. I went to the TidyTuesday Github repo. Once there I found the <a href="(https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-03-16)">Video Games and Sliced</a> dataset. This dataset looked interesting to me because (1) it was about gaming which is a topic often spoken about in my household, and (2) it was a relatively small dataset containing only seven variables.</p>
-<p>In this post, I’ll first give a narrative summary of what I did. I include all the code and the final visualisation at the end of the post. You can find all the code at the <a href="https://github.com/MaxineNSchaefer/tidytuesday">TidyTuesday repo on Github</a>.</p>
-<p>First, load packages with <code>library()</code>. I loaded <code>{tidyverse}</code> and <code>{tidytuesdayR}</code>. I downloaded the data from Github using <code>{tidytuesdayR}</code> as indicated in the repo that contains the data. I soon realised you cannot keep downloading the data from online so I saved the data to a .csv file.</p>
-<p>I next peaked at the data using <code>View()</code>. This function shows you the data in the dataviewer. However, one also needs to summarise the data to see what one is working with. I used <code>skim()</code> from <code>{skimr}</code> for this overview. I also noted the data type of each variable.</p>
-<p>I decided to focus on Dota 2 because this is a game my husband loves to play. I also wanted to look at the peak number of players per month and how this changed over a year. I decided on 2019 since it was the last ‘normal’ year, and because I remember having the chance to open some of the prizes in my husband’s Battle Pass before The International. For those who don’t know, The International is the main and largest competition of the Dota 2 season each year. Thus, for my visualisation I added some data on the start and end dates of TI, and included the value of the total prize pool.</p>
-<p><strong>What did I find? Peak player numbers do go up during TI, but do not reach the peak number of players in March.</strong></p>
-<figure>
-<img src="final_plot.png" alt="Peak number (in thousands) of Dota 2 players in 2019" /><figcaption aria-hidden="true">Peak number (in thousands) of Dota 2 players in 2019</figcaption>
-</figure>
-<p>In keeping with the Dota 2 ‘feel’ I made the visualisation dark. I even asked my husband, Mark, for some tips to make it feel more like Dota 2. We ended up with red as the colour. I am not sure I am in love with it, but I’m still proud of my first TidyTuesday attempt.</p>
-<p>Here’s the code to make the plot.</p>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#set-up">Set up</a></li>
+<li><a href="#simulate-data-with-some-context">Simulate data (with some context)</a></li>
+<li><a href="#visualisation">Visualisation</a>
+<ul>
+<li><a href="#plot-1---l1-task-administration">Plot 1 - L1 task administration</a></li>
+<li><a href="#plot-2---english-task-adminstration">Plot 2 - English task adminstration</a></li>
+<li><a href="#add-the-graphs-together-using-patchwork">Add the graphs together using <code>{patchwork}</code></a></li>
+</ul></li>
+<li><a href="#a-note-on-data-simulation">A note on data simulation</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h1 id="introduction">Introduction</h1>
+<p>I am working on the descriptive statistics section of the Grade 1 sample of my PhD. I thought I’d share how I used <code>{patchwork}</code> for one of the plots, using simulated data based on my PhD data.</p>
+<p>Recently I have become interested in data simulation, especially since I, unfortunately, did not know about open science until I had already asked for informed consent from my participants’ guardians. I cannot share the data from my PhD, but I can share simulated data from it. I recently attended some sessions of the very useful <a href="http://www.psypag.co.uk/">Psychology Postgraduate Affairs Group (PsyPAG)</a> &amp; MSCP-Section Simulation Summer School (<a href="https://simsummerschool.github.io/">resources here</a>) where I picked up tips on simulating data for linear models and linear fixed effects models. It was a lot to take in, so in this post, I only apply what I learned about simulating a dataset from <a href="https://www.youtube.com/watch?v=x2hhc5KYw-c">Andrew Hales’ session on 9 June 2021</a>.</p>
+<p>I also need to give a special shout out to the wonderful people who put all the answers to my frequently searched <code>{ggplot2}</code> questions in one neat tutorial. If you’re like me please go, RIGHT NOW, and bookmark this <a href="https://psyteachr.github.io/introdataviz/">Intro to Data Viz tutorial</a> from PsyTeachR. I learned about <code>{patchwork}</code> from that tutorial.</p>
+<p>Alright, now for the task at hand. In this blog, I simulate rapid automatised naming (RAN) data based on the results of participants in my PhD then present a density plot of the distribution of scores for different tasks (letters, digits, colours and objects) per language group (isiXhosa and isiZulu) and per language of administration (first language and English).</p>
+<h2 id="set-up">Set up</h2>
+<p>Load packages.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># libraries</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/thebioengineer/tidytuesdayR'>tidytuesdayR</a></span><span class='op'>)</span> <span class='co'># only to initially download data</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>ggdark</span><span class='op'>)</span> <span class='co'># for dark minimal theme</span>
-
-<span class='co'># Download and save data</span>
-<span class='va'>tuesdata</span> <span class='op'>&lt;-</span> <span class='fu'>tidytuesdayR</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/tidytuesdayR/man/tt_load.html'>tt_load</a></span><span class='op'>(</span><span class='st'>'2021-03-16'</span><span class='op'>)</span>
-<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>tuesdata</span><span class='op'>$</span><span class='va'>games</span>
-
-<span class='co'># Check out the data</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/View.html'>View</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span>
-<span class='fu'>skimr</span><span class='fu'>::</span><span class='fu'><a href='https://docs.ropensci.org/skimr/reference/skim.html'>skim</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span>
-
-<span class='co'># TI start and end</span>
-<span class='va'>TIstart</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='fl'>7</span><span class='op'>/</span><span class='fl'>30</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>7</span> <span class='co'># TI starts 7 of July, convert the 7th day into a decimal and add to 7th month</span>
-<span class='va'>TIend</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='fl'>26</span><span class='op'>/</span><span class='fl'>30</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>8</span> <span class='co'># TI ends 26 Aug, convert the 26th day into a decimal and add to 8th month</span>
-
-<span class='co'># Generate graph</span>
-
-<span class='va'>p_final</span> <span class='op'>&lt;-</span> 
-  
-  <span class='co'># get data ready</span>
- <span class='va'>dat</span> <span class='op'>%&gt;%</span> 
-  
-  <span class='co'># filter data to include only Dota 2 for 2019</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>gamename</span> <span class='op'>==</span> <span class='st'>"Dota 2"</span>, <span class='co'># keep only Dota 2</span>
-         <span class='va'>year</span> <span class='op'>==</span> <span class='fl'>2019</span><span class='op'>)</span> <span class='op'>%&gt;%</span>     <span class='co'># keep only year 2019</span>
-  
-  <span class='co'># make axis more readable</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>peak_in_thousands <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>peak</span><span class='op'>/</span><span class='fl'>1000</span><span class='op'>)</span>, <span class='fl'>0</span> <span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='co'># reduce numbers on the graph by dividing by 1000</span>
-  
-  <span class='co'># convert months to numbers so that the months are listed in order in the graph</span>
-  <span class='fu'>mutate</span><span class='op'>(</span>month <span class='op'>=</span> <span class='fu'>case_when</span><span class='op'>(</span>   
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"January"</span> <span class='op'>~</span> <span class='fl'>1</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"February"</span> <span class='op'>~</span> <span class='fl'>2</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"March"</span> <span class='op'>~</span> <span class='fl'>3</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"April"</span> <span class='op'>~</span> <span class='fl'>4</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"May"</span> <span class='op'>~</span> <span class='fl'>5</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"June"</span> <span class='op'>~</span> <span class='fl'>6</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"July"</span> <span class='op'>~</span> <span class='fl'>7</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"August"</span> <span class='op'>~</span> <span class='fl'>8</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"September"</span> <span class='op'>~</span> <span class='fl'>9</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"October"</span> <span class='op'>~</span> <span class='fl'>10</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"November"</span> <span class='op'>~</span> <span class='fl'>11</span>,
-    <span class='va'>month</span> <span class='op'>==</span> <span class='st'>"December"</span> <span class='op'>~</span> <span class='fl'>12</span>
-  <span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>mutate</span><span class='op'>(</span>month <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>month</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>  <span class='co'># convert to numeric so that the months will be listed in order</span>
-
-
-<span class='co'># base graph</span>
- <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>month</span>, y <span class='op'>=</span> <span class='va'>peak_in_thousands</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> 
-  <span class='fu'>geom_point</span><span class='op'>(</span>shape <span class='op'>=</span> <span class='fl'>17</span>, size <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add points</span>
-  <span class='fu'>geom_line</span><span class='op'>(</span>linetype <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add lines to join points</span>
-  
-  <span class='co'># add labels</span>
-  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Month in 2019"</span>,  
-       y <span class='op'>=</span> <span class='st'>"Peak number of players in thousands"</span>,
-       title <span class='op'>=</span> <span class='st'>"PEAK NUMBER OF DOTA 2 PLAYERS"</span>,
-       subtitle <span class='op'>=</span> <span class='st'>"per month in 2019"</span>, 
-       caption <span class='op'>=</span> <span class='st'>"Data source: TidyTuesday 2021-03-16
-       @MaxineNSchaefer"</span><span class='op'>)</span> <span class='op'>+</span>
-  
-  <span class='co'># fix axis breaks and limits</span>
-  <span class='fu'>scale_x_continuous</span><span class='op'>(</span>n.breaks <span class='op'>=</span> <span class='fl'>12</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># have a break for each month</span>
-  <span class='fu'>scale_y_continuous</span><span class='op'>(</span>limits <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>1100</span><span class='op'>)</span>, breaks <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>100</span>, <span class='fl'>200</span>, <span class='fl'>300</span>, <span class='fl'>400</span>, <span class='fl'>500</span>, <span class='fl'>600</span>, <span class='fl'>700</span>, <span class='fl'>800</span>, <span class='fl'>900</span>, <span class='fl'>1000</span>, <span class='fl'>1100</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># start at 0</span>
-  
-  <span class='co'># add start and end dates of The International which I got from https://liquipedia.net/dota2/The_International/2019#Viewership_Stats</span>
-  <span class='fu'>geom_vline</span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='va'>TIstart</span>, color <span class='op'>=</span> <span class='st'>"#cc0000"</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add start date and color using Dota 2 colour</span>
-  <span class='fu'>geom_vline</span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='va'>TIend</span>, color <span class='op'>=</span> <span class='st'>"#cc0000"</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add end date and color using Dota 2 colour</span>
-  
-    <span class='co'># add label for TI, and prize pool</span>
-  <span class='fu'>annotate</span><span class='op'>(</span>geom<span class='op'>=</span><span class='st'>"text"</span>, x<span class='op'>=</span><span class='fl'>8</span>, y<span class='op'>=</span><span class='fl'>450</span>, label<span class='op'>=</span><span class='st'>"TI 9"</span>, color<span class='op'>=</span><span class='st'>"#cc0000"</span>, size <span class='op'>=</span> <span class='fl'>6</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add text to graph </span>
-  <span class='fu'>annotate</span><span class='op'>(</span>geom<span class='op'>=</span><span class='st'>"text"</span>, x<span class='op'>=</span><span class='fl'>10</span>, y<span class='op'>=</span><span class='fl'>450</span>, label<span class='op'>=</span> <span class='co'># add text to indicate prize pool value</span>
-  <span class='st'>"Prize pool
-  34.33 mil USD"</span>, color<span class='op'>=</span><span class='st'>"#cc0000"</span>, size <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span> <span class='op'>+</span>
-  
-  <span class='co'># edit theme</span>
-<span class='fu'><a href='https://rdrr.io/pkg/ggdark/man/ggdarktheme.html'>dark_theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add basic dark theme from {ggdark}</span>
-  
-  <span class='co'># edit theme to match Dota 2 colours more or less</span>
-  <span class='fu'>theme</span><span class='op'>(</span>axis.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"#b22222"</span>, face <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span>,
-        plot.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>20</span>, colour <span class='op'>=</span> <span class='st'>"#cc0000"</span>, face <span class='op'>=</span> <span class='st'>"bold"</span>, family <span class='op'>=</span> <span class='st'>"serif"</span><span class='op'>)</span>, <span class='co'>#change the font for the title</span>
-        plot.subtitle <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"#cc0000"</span><span class='op'>)</span>,
-        plot.caption <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"#b22222"</span><span class='op'>)</span>,
-        axis.text <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>colour <span class='op'>=</span> <span class='st'>"#b22222"</span><span class='op'>)</span>,
-        panel.grid.major <span class='op'>=</span> <span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>, <span class='co'># remove grid lines</span>
-        panel.grid.minor <span class='op'>=</span> <span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>  <span class='co'># remove grid lines</span>
-
-<span class='va'>p_final</span>
-<span class='co'># ggsave("final_plot.png")</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://patchwork.data-imaginist.com'>patchwork</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://jtools.jacob-long.com'>jtools</a></span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h2 id="simulate-data-with-some-context">Simulate data (with some context)</h2>
+<p>Since I did not ask for permission to share the data from my PhD, I need to simulate the data based on the summary statistics from my Grade 1 sample. I suppose a summary of what I am doing is needed.</p>
+<p>I am examining how phonological processing skills (phonological awareness, rapid automatised naming and phonological working memory) develop over time and contribute to literacy development in children’s first language (L1; isiXhosa or isiZulu) and additional language (English). I collected data from isiXhosa-English and isiZulu-English emergent bilingual children who attended schools where the medium of instruction matched their first language. All constructs where measured with more than one task in both L1 and English. For the blog at hand, I refer only to the distribution of scores for the rapid automatised naming (RAN) task.</p>
+<p>A RAN task requires a participant to name a set of six items (either digits, letters, colours or objects) in an array of 9 by 4 as fast as they can. The final score is the total number of seconds taken to name all items. RAN is a predictor of reading fluency.</p>
+<p>For the data simulation, I simulated data for <code>id</code>, <code>language</code>, and the different RAN tasks (digits, letters, objects, colours). Because of educational practices, and based on the pilot study, RAN letters was only administered in L1, and RAN colours and RAN digits was only administered in English. I used the mean and standard deviations from these tasks to simulate data for this blog. I simulated the data separately for each language group in the study and then combined the datasets using <code>rbind()</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>sample_size</span> <span class='op'>&lt;-</span> <span class='fl'>70</span> <span class='co'># set sample size (this number differs from my PhD)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1405</span><span class='op'>)</span>    <span class='co'># set seed for reprodicibility</span>
+
+<span class='co'># simulate data for group 1 (in wide format)</span>
+<span class='va'>xhosa</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+   <span class='st'>"id"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='va'>sample_size</span><span class='op'>)</span>,   <span class='co'># give the participants unique IDs</span>
+   <span class='st'>"language"</span> <span class='op'>=</span> <span class='st'>"isiXhosa"</span>,        <span class='co'># assign participants to isiXhosa group</span>
+   
+   <span class='co'>#simulate data based on summary stats from my project</span>
+   <span class='st'>"L1_ran_let_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>53</span>, sd <span class='op'>=</span> <span class='fl'>20</span><span class='op'>)</span>,
+   <span class='st'>"L1_ran_obj_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>56</span>, sd <span class='op'>=</span> <span class='fl'>13</span><span class='op'>)</span>,
+   <span class='st'>"English_ran_dig_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>47</span>, sd <span class='op'>=</span> <span class='fl'>16</span><span class='op'>)</span>,
+   <span class='st'>"English_ran_obj_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>77</span>, sd <span class='op'>=</span> <span class='fl'>22</span><span class='op'>)</span>,
+   <span class='st'>"English_ran_col_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>71</span>, sd <span class='op'>=</span> <span class='fl'>23</span><span class='op'>)</span>
+   <span class='op'>)</span>
+
+<span class='co'># simulate data for group 2 (in wide format)</span>
+<span class='va'>zulu</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+   <span class='st'>"id"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>sample_size</span> <span class='op'>+</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>:</span><span class='op'>(</span><span class='va'>sample_size</span><span class='op'>*</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>,   <span class='co'># give the participants unique IDs</span>
+   <span class='st'>"language"</span> <span class='op'>=</span> <span class='st'>"isiZulu"</span>,                            <span class='co'># assign participants to isiZulu group</span>
+   
+   <span class='co'>#simulate data based on summary stats from my project</span>
+   <span class='st'>"L1_ran_let_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>49</span>, sd <span class='op'>=</span> <span class='fl'>22</span><span class='op'>)</span>,
+   <span class='st'>"L1_ran_obj_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>55</span>, sd <span class='op'>=</span> <span class='fl'>12</span><span class='op'>)</span>,
+   <span class='st'>"English_ran_dig_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>47</span>, sd <span class='op'>=</span> <span class='fl'>18</span><span class='op'>)</span>,
+   <span class='st'>"English_ran_obj_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>64</span>, sd <span class='op'>=</span> <span class='fl'>16</span><span class='op'>)</span>,
+   <span class='st'>"English_ran_col_time"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='va'>sample_size</span>, mean <span class='op'>=</span> <span class='fl'>57</span>, sd <span class='op'>=</span> <span class='fl'>18</span><span class='op'>)</span>
+   <span class='op'>)</span>
+
+<span class='co'># join datasets</span>
+<span class='va'>sim_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>xhosa</span>, <span class='va'>zulu</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>The simulated data is in wide format. To create the graph I want, I need to convert the data to long form. The <a href="https://psyteachr.github.io/introdataviz/transforming-data.html">PsyteachR tutorial</a> also explains how to do this, but I first learned how to do this from Emma James and colleagues’ <a href="https://osf.io/96542/">open data</a> for their 2021 paper on <a href="https://doi.org/10.1111/1467-9817.12316">“The relations between morphological awareness and reading comprehension in beginner readers to young adolescents”</a>.</p>
+<p>The code below shows how I use <code>pivot_longer()</code> to convert the data from wide to long format so that each observation occupies a row.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>sim_data_long</span> <span class='op'>&lt;-</span> <span class='va'>sim_data</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='fl'>3</span><span class='op'>:</span><span class='fl'>7</span>, names_to <span class='op'>=</span> <span class='st'>"task"</span>, values_to <span class='op'>=</span> <span class='st'>"score"</span><span class='op'>)</span> 
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>sim_data_long</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 6 x 4
+     id language task                 score
+  &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;                &lt;dbl&gt;
+1     1 isiXhosa L1_ran_let_time       58.4
+2     1 isiXhosa L1_ran_obj_time       67.5
+3     1 isiXhosa English_ran_dig_time  50.0
+4     1 isiXhosa English_ran_obj_time  36.5
+5     1 isiXhosa English_ran_col_time  75.0
+6     2 isiXhosa L1_ran_let_time       60.1</code></pre>
+</div>
+<p><code>task</code> still contains data for two variables: the language of the task and the task itself. I separate these values using <code>separate()</code> using the underscore in the task name, then I convert the character variables to factors to make it easier to plot.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>sim_data_long</span> <span class='op'>&lt;-</span> <span class='va'>sim_data</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='fl'>3</span><span class='op'>:</span><span class='fl'>7</span>, names_to <span class='op'>=</span> <span class='st'>"task"</span>, values_to <span class='op'>=</span> <span class='st'>"score"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>   <span class='co'># change to long format</span>
+  <span class='fu'>separate</span><span class='op'>(</span>col <span class='op'>=</span> <span class='va'>task</span>, into <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"tasklang"</span>, <span class='st'>"task"</span><span class='op'>)</span>, sep <span class='op'>=</span> <span class='st'>"_"</span>, extra <span class='op'>=</span> <span class='st'>"merge"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>  <span class='co'># separate language of administration from task</span>
+  <span class='fu'>mutate</span><span class='op'>(</span><span class='fu'>across</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>language</span>, <span class='va'>tasklang</span>,<span class='va'>task</span><span class='op'>)</span>, <span class='va'>as_factor</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># change character variables into factors</span>
+</code></pre>
+</div>
+</div>
+<h2 id="visualisation">Visualisation</h2>
+<p>I want to show the distribution of the scores for <strong>each task</strong> for <strong>each language group</strong> and <strong>each language of task administration</strong>. Unfortunately, you can only really represent three variables at a time in one visualisation (well, anyway, I only know how to show three!). I decided to create two plots, one for each language of administration.</p>
+<p>To do this, I assigned one variable to <code>x</code> in ggplot (i.e. <code>score</code>), one variable to <code>fill</code> and <code>colour</code> (i.e. <code>language</code>), and one variable to <code>facet_wrap()</code> (i.e. <code>task</code>). I then filtered by language of task administration (i.e. <code>tasklang</code>) so that I would have one visualisation for L1 and one for English. Once I have both graphs, I group them together neatly using <code>{patchwork}</code>.</p>
+<h3 id="plot-1---l1-task-administration">Plot 1 - L1 task administration</h3>
+<p>Here, I filtered the data so that only the L1 data was included. I planned to have this plot at the top since it included fewer tasks than the English administration.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='va'>sim_data_long</span> <span class='op'>%&gt;%</span>   
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>tasklang</span> <span class='op'>==</span> <span class='st'>"L1"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>   <span class='co'># visualise data for L1 only</span>
+  
+  <span class='co'># rename for neater graph</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>
+    task <span class='op'>=</span> <span class='fu'>case_when</span><span class='op'>(</span>
+      <span class='va'>task</span> <span class='op'>==</span> <span class='st'>"ran_col_time"</span> <span class='op'>~</span> <span class='st'>"Colours"</span>,
+      <span class='va'>task</span> <span class='op'>==</span> <span class='st'>"ran_dig_time"</span> <span class='op'>~</span> <span class='st'>"Digits"</span>,
+      <span class='va'>task</span> <span class='op'>==</span> <span class='st'>"ran_let_time"</span> <span class='op'>~</span> <span class='st'>"Letters"</span>,
+      <span class='va'>task</span> <span class='op'>==</span> <span class='st'>"ran_obj_time"</span> <span class='op'>~</span> <span class='st'>"Objects"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  
+  <span class='co'># add base plot</span>
+  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>score</span>, <span class='co'># distribution of scores</span>
+             colour <span class='op'>=</span> <span class='va'>language</span>, fill <span class='op'>=</span> <span class='va'>language</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># colour and fill for each language group</span>
+  
+  <span class='co'># density graph with colours</span>
+  <span class='fu'>geom_density</span><span class='op'>(</span>alpha <span class='op'>=</span> <span class='fl'>.3</span><span class='op'>)</span> <span class='op'>+</span>  <span class='co'># add density geom with alpha at .3 for easer view of each language group</span>
+  <span class='fu'>scale_colour_viridis_d</span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Language"</span>, option <span class='op'>=</span> <span class='st'>"E"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>scale_fill_viridis_d</span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Language"</span>, option <span class='op'>=</span> <span class='st'>"E"</span><span class='op'>)</span> <span class='op'>+</span>
+  
+  <span class='co'># add theme</span>
+  <span class='fu'><a href='https://jtools.jacob-long.com/reference/theme_apa.html'>theme_apa</a></span><span class='op'>(</span><span class='op'>)</span>  <span class='op'>+</span>  <span class='co'># use APA theme from jtools</span>
+  <span class='fu'>theme</span><span class='op'>(</span>plot.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>12</span>, face <span class='op'>=</span> <span class='st'>"plain"</span>, hjust <span class='op'>=</span> <span class='fl'>.5</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>  <span class='co'># specify size, face and position of title</span>
+  
+  <span class='co'># edit axes</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='cn'>NULL</span>, y <span class='op'>=</span> <span class='st'>"Density"</span>, title <span class='op'>=</span> <span class='st'>"L1"</span><span class='op'>)</span> <span class='op'>+</span>  <span class='co'># no x axis label since we will add this plot to another one</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.window.html'>xlim</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>150</span><span class='op'>)</span> <span class='op'>+</span>    <span class='co'># set x axis limits</span>
+  <span class='fu'>guides</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='cn'>FALSE</span>, color <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>  <span class='co'># hide the legend since it will be in the second graph</span>
+  
+  <span class='fu'>facet_wrap</span><span class='op'>(</span><span class='op'>~</span><span class='va'>task</span><span class='op'>)</span> <span class='co'># use facet_wrap so that each task has its own panel</span>
+
+<span class='va'>p1</span> <span class='co'># print visualisation</span>
+</code></pre>
+</div>
+<p><img src="using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
+</div>
+<h3 id="plot-2---english-task-adminstration">Plot 2 - English task adminstration</h3>
+<p>Here, I filtered the data so that only the English data was included.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='va'>sim_data_long</span> <span class='op'>%&gt;%</span> 
+  
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>tasklang</span> <span class='op'>==</span> <span class='st'>"English"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>  <span class='co'># use only English data</span>
+  
+  <span class='co'># rename for neater graph</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>task <span class='op'>=</span> <span class='fu'>case_when</span><span class='op'>(</span>
+      <span class='va'>task</span> <span class='op'>==</span> <span class='st'>"ran_col_time"</span> <span class='op'>~</span> <span class='st'>"Colours"</span>,
+      <span class='va'>task</span> <span class='op'>==</span> <span class='st'>"ran_dig_time"</span> <span class='op'>~</span> <span class='st'>"Digits"</span>,
+      <span class='va'>task</span> <span class='op'>==</span> <span class='st'>"ran_let_time"</span> <span class='op'>~</span> <span class='st'>"Letters"</span>,
+      <span class='va'>task</span> <span class='op'>==</span> <span class='st'>"ran_obj_time"</span> <span class='op'>~</span> <span class='st'>"Objects"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  
+  <span class='co'># base layer</span>
+  <span class='fu'>ggplot</span><span class='op'>(</span><span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>score</span>, 
+             colour <span class='op'>=</span> <span class='va'>language</span>, fill <span class='op'>=</span> <span class='va'>language</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  
+  <span class='co'># density graph with colours</span>
+  <span class='fu'>geom_density</span><span class='op'>(</span>alpha <span class='op'>=</span> <span class='fl'>.3</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>scale_colour_viridis_d</span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Language"</span>, option <span class='op'>=</span> <span class='st'>"E"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>scale_fill_viridis_d</span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Language"</span>, option <span class='op'>=</span> <span class='st'>"E"</span><span class='op'>)</span> <span class='op'>+</span>
+  
+  <span class='co'># add theme</span>
+  <span class='fu'><a href='https://jtools.jacob-long.com/reference/theme_apa.html'>theme_apa</a></span><span class='op'>(</span><span class='op'>)</span>  <span class='op'>+</span> 
+  <span class='fu'>theme</span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"bottom"</span>, <span class='co'># place the legend at the bottom of the graph</span>
+        plot.title <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>12</span>, face <span class='op'>=</span> <span class='st'>"plain"</span>, hjust <span class='op'>=</span> <span class='fl'>.5</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  
+  <span class='co'># edit axes</span>
+  <span class='fu'>labs</span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Time (seconds)"</span>, y <span class='op'>=</span> <span class='st'>"Density"</span>, title <span class='op'>=</span> <span class='st'>"English"</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># add label for y</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.window.html'>xlim</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>150</span><span class='op'>)</span> <span class='op'>+</span>
+  
+  <span class='fu'>facet_wrap</span><span class='op'>(</span><span class='op'>~</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>task</span>, 
+                     levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Digits"</span>, <span class='st'>"Objects"</span>, <span class='st'>"Colours"</span><span class='op'>)</span>,  <span class='co'># specify the order of the labels for each facet</span>
+                     labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Digits"</span>, <span class='st'>"Objects"</span>, <span class='st'>"Colours"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># specify the labels for each facet</span>
+
+<span class='va'>p2</span>
+</code></pre>
+</div>
+<p><img src="using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+</div>
+<h3 id="add-the-graphs-together-using-patchwork">Add the graphs together using <code>{patchwork}</code></h3>
+<p>After first reading about <code>{patchwork}</code> in the <a href="https://psyteachr.github.io/introdataviz/multi-part-plots.html">IntroDataViz tutorial of PsyTeachR</a> I also found the <a href="https://patchwork.data-imaginist.com/articles/guides/layout.html">Patchwork website</a> helpful.</p>
+<p>Now, I wanted to present the two graphs together making sure that the axes of letters/digits and objects overlap because these tasks can be directly compared to one another. The digit and letter RAN both measure alphanumeric RAN and the objects task is directly comparable for each language of administration.<code>{patchwork}</code> can be used to assemble the graphs exactly how you want using the operators <code>+</code>, <code>|</code>, and <code>/</code> as well as the <code>plot_layout()</code> function.</p>
+<p>Here are the non-fiddly options using the operators. <code>+</code> places plots next to one another.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>+</span> <span class='va'>p2</span>
+</code></pre>
+</div>
+<p><img src="using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
+</div>
+<p>Using <code>|</code> gives the same output as <code>+</code>. Maybe I am doing something wrong?</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>|</span> <span class='va'>p2</span>
+</code></pre>
+</div>
+<p><img src="using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+</div>
+<p>Use <code>/</code> to place the first plot on top of the second plot. This is OK because the plots fit into a neat rectangle, however, it does not allow the clear comparison between the letters/digits and objects in each language of test administration.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>/</span> <span class='va'>p2</span>
+</code></pre>
+</div>
+<p><img src="using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+</div>
+<p>In the end, to make the graphs line up exactly how I wanted, I defined a layout to use where # is a space and the letters refer to different graphs.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>layout</span> <span class='op'>&lt;-</span> <span class='st'>"
+AA#
+BBB
+"</span>
+
+<span class='va'>p1</span> <span class='op'>/</span><span class='va'>p2</span> <span class='op'>+</span> 
+  <span class='fu'><a href='https://patchwork.data-imaginist.com/reference/plot_layout.html'>plot_layout</a></span><span class='op'>(</span>design <span class='op'>=</span> <span class='va'>layout</span><span class='op'>)</span> 
+</code></pre>
+</div>
+<p><img src="using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
+</div>
+<p>Ah, I very much like this plot. It shows how the isiZulu group names objects and colours faster than the isiXhosa group. While I am yet to discuss this in my PhD chapter, I think this between-groups difference results from vocabulary differences in the groups with the isiZulu group having a larger English vocabulary (stay tuned for my PhD dissertation!).</p>
+<p>And for comparison, here is the plot based on ‘real’ data from my Phd. <img src="density_ran.png" alt="Density plots for RAN tasks in L1 (top) and English (bottom) per language group" /></p>
+<h2 id="a-note-on-data-simulation">A note on data simulation</h2>
+<p>Data simulation doesn’t solve the world of problems. I calculated the summary statistics of this data simulation below.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>sim_data_long</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>language</span>, <span class='va'>tasklang</span>, <span class='va'>task</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>summarise</span><span class='op'>(</span>mean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>score</span><span class='op'>)</span>,
+            SD <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/sd.html'>sd</a></span><span class='op'>(</span><span class='va'>score</span><span class='op'>)</span>,
+            min <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>score</span><span class='op'>)</span>,
+            max <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>score</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>arrange</span><span class='op'>(</span><span class='va'>task</span>, <span class='va'>tasklang</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 10 x 7
+# Groups:   language, tasklang [4]
+   language tasklang task          mean    SD   min   max
+   &lt;fct&gt;    &lt;fct&gt;    &lt;fct&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 isiXhosa L1       ran_let_time  53.3  19.6 -4.37 104. 
+ 2 isiZulu  L1       ran_let_time  50.0  21.3  4.08 102. 
+ 3 isiXhosa L1       ran_obj_time  56.9  13.6 20.0   88.4
+ 4 isiZulu  L1       ran_obj_time  57.7  13.2 29.1   89.5
+ 5 isiXhosa English  ran_obj_time  76.5  21.4 31.8  123. 
+ 6 isiZulu  English  ran_obj_time  64.2  17.2 28.6  100. 
+ 7 isiXhosa English  ran_dig_time  47.2  16.9  3.49  94.1
+ 8 isiZulu  English  ran_dig_time  47.3  19.7  1.71  92.5
+ 9 isiXhosa English  ran_col_time  68.2  20.8 18.1  132. 
+10 isiZulu  English  ran_col_time  58.2  14.6 29.4   92.9</code></pre>
+</div>
+<p>You’ll notice that the minimum time for RAN letters for the isiXhosa group in L1 is -4.4 seconds. This value and some of the other minimum values are not plausible for reaction time data to name 36 items. I have not yet learned how to simulate data that better matches reaction time data. I suppose that this is just a warning that simulated data cannot really supplement the real thing.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
     <span class="disqus-comments">
       <i class="fas fa-comments"></i>
       &nbsp;
-      <span class="disqus-comment-count" data-disqus-identifier="posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/">Comment on this article</span>
+      <span class="disqus-comment-count" data-disqus-identifier="posts/2021-06-25-using-patchwork-for-neat-visualisations/">Comment on this article</span>
     </span>
     <span class="article-sharing">
       Share: &nbsp;
-      <a href="https://twitter.com/share?text=Tidy%20Tuesday%202021-03-16%3A%20Video%20Games%20and%20Sliced&amp;url=https%3A%2F%2Fmaxinenschaefer.github.io%2FMaxineSchaefer%2Fposts%2F2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced%2F">
+      <a href="https://twitter.com/share?text=Using%20%7Bpatchwork%7D%20for%20neat%20visualisations&amp;url=https%3A%2F%2Fmaxinenschaefer.github.io%2FMaxineSchaefer%2Fposts%2F2021-06-25-using-patchwork-for-neat-visualisations%2F">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fmaxinenschaefer.github.io%2FMaxineSchaefer%2Fposts%2F2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced%2F&amp;title=Tidy%20Tuesday%202021-03-16%3A%20Video%20Games%20and%20Sliced">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fmaxinenschaefer.github.io%2FMaxineSchaefer%2Fposts%2F2021-06-25-using-patchwork-for-neat-visualisations%2F&amp;title=Using%20%7Bpatchwork%7D%20for%20neat%20visualisations">
         <i class="fab fa-linkedin"></i>
       </a>
     </span>
@@ -2554,8 +2711,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   <div id="disqus_thread" class="hidden"></div>
   <script type="text/javascript" cookie-consent="functionality">
 var disqus_config = function () {
-  this.page.url = 'https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/';
-  this.page.identifier = 'posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/';
+  this.page.url = 'https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/';
+  this.page.identifier = 'posts/2021-06-25-using-patchwork-for-neat-visualisations/';
 };
 (function() {
   var d = document, s = d.createElement('script');
@@ -2580,12 +2737,12 @@ var disqus_config = function () {
   <p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Schaefer (2021, June 19). Maxine Schaefer: Tidy Tuesday 2021-03-16: Video Games and Sliced. Retrieved from https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/</pre>
+  <pre class="citation-appendix short">Schaefer (2021, June 25). Maxine Schaefer: Using {patchwork} for neat visualisations. Retrieved from https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/</pre>
   <p>BibTeX citation</p>
-  <pre class="citation-appendix long">@misc{schaefer2021tidy,
+  <pre class="citation-appendix long">@misc{schaefer2021using,
   author = {Schaefer, Maxine},
-  title = {Maxine Schaefer: Tidy Tuesday 2021-03-16: Video Games and Sliced},
-  url = {https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/},
+  title = {Maxine Schaefer: Using {patchwork} for neat visualisations},
+  url = {https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/},
   year = {2021}
 }</pre>
 </div>

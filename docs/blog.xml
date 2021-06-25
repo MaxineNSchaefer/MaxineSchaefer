@@ -7,7 +7,16 @@
     <description>Researcher interested in phonological processing and literacy development, R and open science
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Using {patchwork} for neat visualisations</title>
+      <dc:creator>Maxine Schaefer</dc:creator>
+      <link>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations</link>
+      <description>I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings.</description>
+      <guid>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations</guid>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/density_ran.png" medium="image" type="image/png" width="2125" height="1417"/>
+    </item>
     <item>
       <title>Tidy Tuesday 2021-03-16: Video Games and Sliced</title>
       <dc:creator>Maxine Schaefer</dc:creator>
