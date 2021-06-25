@@ -9,6 +9,11 @@ date: 06-19-2021
 output:
   distill::distill_article:
     self_contained: false
+    toc: yes
+    toc_float: yes
+    number_sections: yes
+    theme: readable
+    df_print: kable
 preview: final_plot.png
 ---
 

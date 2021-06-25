@@ -110,7 +110,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Using {patchwork} for neat visualisations"]},{"type":"character","attributes":{},"value":["I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxine Schaefer"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["06-25-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview"]}},"value":[{"type":"character","attributes":{},"value":["Using {patchwork} for neat visualisations"]},{"type":"character","attributes":{},"value":["I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Maxine Schaefer"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["06-25-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float","number_sections","theme","df_print"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["readable"]},{"type":"character","attributes":{},"value":["kable"]}]}]},{"type":"character","attributes":{},"value":["density_ran.png"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1477,11 +1477,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#set-up">Set up</a></li>
+<li><a href="#simulate-data-with-some-context">Simulate data (with some context)</a></li>
+<li><a href="#visualisation">Visualisation</a>
+<ul>
+<li><a href="#plot-1---l1-task-administration">Plot 1 - L1 task administration</a></li>
+<li><a href="#plot-2---english-task-adminstration">Plot 2 - English task adminstration</a></li>
+<li><a href="#add-the-graphs-together-using-patchwork">Add the graphs together using <code>{patchwork}</code></a></li>
+</ul></li>
+<li><a href="#a-note-on-data-simulation">A note on data simulation</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
 <h1 id="introduction">Introduction</h1>
 <p>I am working on the descriptive statistics section of the Grade 1 sample of my PhD. I thought I’d share how I used <code>{patchwork}</code> for one of the plots, using simulated data based on my PhD data.</p>
 <p>Recently I have become interested in data simulation, especially since I, unfortunately, did not know about open science until I had already asked for informed consent from my participants’ guardians. I cannot share the data from my PhD, but I can share simulated data from it. I recently attended some sessions of the very useful <a href="http://www.psypag.co.uk/">Psychology Postgraduate Affairs Group (PsyPAG)</a> &amp; MSCP-Section Simulation Summer School (<a href="https://simsummerschool.github.io/">resources here</a>) where I picked up tips on simulating data for linear models and linear fixed effects models. It was a lot to take in, so in this post, I only apply what I learned about simulating a dataset from <a href="https://www.youtube.com/watch?v=x2hhc5KYw-c">Andrew Hales’ session on 9 June 2021</a>.</p>
 <p>I also need to give a special shout out to the wonderful people who put all the answers to my frequently searched <code>{ggplot2}</code> questions in one neat tutorial. If you’re like me please go, RIGHT NOW, and bookmark this <a href="https://psyteachr.github.io/introdataviz/">Intro to Data Viz tutorial</a> from PsyTeachR. I learned about <code>{patchwork}</code> from that tutorial.</p>
-<p>Alright, now for the task at hand. In this blog, I simulate rapid automatised naming (RAN) data based on the results of participants in my PhD then present a density plot of the distribution of scores for differnt tasks (letters, digits, colours and objects) per language group (isiXhosa and isiZulu) and per language of administration (first language and English).</p>
+<p>Alright, now for the task at hand. In this blog, I simulate rapid automatised naming (RAN) data based on the results of participants in my PhD then present a density plot of the distribution of scores for different tasks (letters, digits, colours and objects) per language group (isiXhosa and isiZulu) and per language of administration (first language and English).</p>
 <h2 id="set-up">Set up</h2>
 <p>Load packages.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1495,7 +1514,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="simulate-data-with-some-context">Simulate data (with some context)</h2>
 <p>Since I did not ask for permission to share the data from my PhD, I need to simulate the data based on the summary statistics from my Grade 1 sample. I suppose a summary of what I am doing is needed.</p>
 <p>I am examining how phonological processing skills (phonological awareness, rapid automatised naming and phonological working memory) develop over time and contribute to literacy development in children’s first language (L1; isiXhosa or isiZulu) and additional language (English). I collected data from isiXhosa-English and isiZulu-English emergent bilingual children who attended schools where the medium of instruction matched their first language. All constructs where measured with more than one task in both L1 and English. For the blog at hand, I refer only to the distribution of scores for the rapid automatised naming (RAN) task.</p>
-<p>A RAN task requires a participant to name a set of six items (either digits, letters, colours or objects) in an array of 9 by 4 as fast as they can. The final score is the total number of second taken to name all items. RAN is a predictor of reading fluency.</p>
+<p>A RAN task requires a participant to name a set of six items (either digits, letters, colours or objects) in an array of 9 by 4 as fast as they can. The final score is the total number of seconds taken to name all items. RAN is a predictor of reading fluency.</p>
 <p>For the data simulation, I simulated data for <code>id</code>, <code>language</code>, and the different RAN tasks (digits, letters, objects, colours). Because of educational practices, and based on the pilot study, RAN letters was only administered in L1, and RAN colours and RAN digits was only administered in English. I used the mean and standard deviations from these tasks to simulate data for this blog. I simulated the data separately for each language group in the study and then combined the datasets using <code>rbind()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1564,10 +1583,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 </div>
 <h2 id="visualisation">Visualisation</h2>
-<p>I want to show the distribution of the scores for <strong>each task</strong> for <strong>each language group</strong> and <strong>language of task administration</strong>. Unfortunately, you can only really represent three variables at a time in one visualisation (well, anyway, I only know how to show three!). I decided to create two plots, one for each language of administration.</p>
+<p>I want to show the distribution of the scores for <strong>each task</strong> for <strong>each language group</strong> and <strong>each language of task administration</strong>. Unfortunately, you can only really represent three variables at a time in one visualisation (well, anyway, I only know how to show three!). I decided to create two plots, one for each language of administration.</p>
 <p>To do this, I assigned one variable to <code>x</code> in ggplot (i.e. <code>score</code>), one variable to <code>fill</code> and <code>colour</code> (i.e. <code>language</code>), and one variable to <code>facet_wrap()</code> (i.e. <code>task</code>). I then filtered by language of task administration (i.e. <code>tasklang</code>) so that I would have one visualisation for L1 and one for English. Once I have both graphs, I group them together neatly using <code>{patchwork}</code>.</p>
 <h3 id="plot-1---l1-task-administration">Plot 1 - L1 task administration</h3>
-<p>Here, I filtered the data so that only the L1 data was included. I planned ot have this plot at the top since it included fewer tasks.</p>
+<p>Here, I filtered the data so that only the L1 data was included. I planned to have this plot at the top since it included fewer tasks than the English administration.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='va'>sim_data_long</span> <span class='op'>%&gt;%</span>   
@@ -1650,7 +1669,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <h3 id="add-the-graphs-together-using-patchwork">Add the graphs together using <code>{patchwork}</code></h3>
 <p>After first reading about <code>{patchwork}</code> in the <a href="https://psyteachr.github.io/introdataviz/multi-part-plots.html">IntroDataViz tutorial of PsyTeachR</a> I also found the <a href="https://patchwork.data-imaginist.com/articles/guides/layout.html">Patchwork website</a> helpful.</p>
-<p>Now, I wanted to present the two graphs together making sure that the axes of letters/digits and objects overlap because these tasks can be directly compared. The digit and letter RAN both measure alphanumeric RAN and the objects task is directly comparable for each language of administration.<code>{patchwork}</code> can be used to assemble the graphs exactly how you want using the operators <code>+</code>, <code>|</code>, and <code>/</code> as well as the <code>plot_layout()</code> function.</p>
+<p>Now, I wanted to present the two graphs together making sure that the axes of letters/digits and objects overlap because these tasks can be directly compared to one another. The digit and letter RAN both measure alphanumeric RAN and the objects task is directly comparable for each language of administration.<code>{patchwork}</code> can be used to assemble the graphs exactly how you want using the operators <code>+</code>, <code>|</code>, and <code>/</code> as well as the <code>plot_layout()</code> function.</p>
 <p>Here are the non-fiddly options using the operators. <code>+</code> places plots next to one another.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1675,7 +1694,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <p><img src="using-patchwork-for-neat-visualisations_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
-<p>In the end, to make the graphs line up exactly how I wanted, I defined a layout to use where <code>#</code> is a space and the letters refer to different graphs.</p>
+<p>In the end, to make the graphs line up exactly how I wanted, I defined a layout to use where # is a space and the letters refer to different graphs.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>layout</span> <span class='op'>&lt;-</span> <span class='st'>"
