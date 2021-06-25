@@ -1,7 +1,7 @@
 ---
 title: "Using {patchwork} for neat visualisations"
 description: |
-  I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings.
+  I present an example of how I used {patchwork} to present density plots for my PhD results chapter. I simulate data based on the results from my PhD to illustrate my learnings.
 author:
   - name: Maxine Schaefer
     url: {https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/}
