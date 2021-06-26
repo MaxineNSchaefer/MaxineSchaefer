@@ -7,14 +7,14 @@
     <description>Researcher interested in phonological processing and literacy development, R and open science
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Using {patchwork} for neat visualisations</title>
       <dc:creator>Maxine Schaefer</dc:creator>
       <link>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations</link>
-      <description>I present an example of how I used {patchwork} to present density plots for my PhD results chapyer. I simulate data based on the results from my PhD to illustrate my learnings.</description>
+      <description>I present an example of how I used {patchwork} to present density plots for my PhD results chapter. I simulate data based on the results from my PhD to illustrate my learnings.</description>
       <guid>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations</guid>
-      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
       <media:content url="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-25-using-patchwork-for-neat-visualisations/density_ran.png" medium="image" type="image/png" width="2125" height="1417"/>
     </item>
     <item>
@@ -23,7 +23,7 @@
       <link>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced</link>
       <description>For my first independent attempt at TidyTuesday I tackled a subject close to my husband's heart: Dota 2.</description>
       <guid>https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced</guid>
-      <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Jun 2021 00:00:00 +0000</pubDate>
       <media:content url="https://maxinenschaefer.github.io/MaxineSchaefer/posts/2021-06-19-tidy-tuesday-2021-03-16-video-games-and-sliced/final_plot.png" medium="image" type="image/png" width="2100" height="2100"/>
     </item>
     <item>
