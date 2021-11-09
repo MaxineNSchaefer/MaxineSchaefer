@@ -2,6 +2,7 @@
 title: "Publications"
 output:
   distill::distill_article
+    toc: true
 links:
   - label: Google Scholar
     url: "https://scholar.google.com/citations?user=RSakTMYAAAAJ&hl=en"
@@ -13,6 +14,7 @@ links:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+#library(distilltools)
 ```
 
 <center>
@@ -37,9 +39,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Journal Articles
 
-**Schaefer, M.**, Probert, T., & Rees, S. (2020). The roles of phonological awareness, rapid automatised naming and morphological awareness in isiXhosa. Per Linguam, 36(1), 90–111. [https://doi.org/10.5785/36-1-878](https://doi.org/10.5785/36-1-878)
+**Schaefer, M.**, Probert, T., & Rees, S. (2020). The roles of phonological awareness, rapid automatised naming and morphological awareness in isiXhosa. Per Linguam, 36(1), 90–111. [https://doi.org/10.5785/36-1-878](https://doi.org/10.5785/36-1-878) (open access)
 
-**Schaefer, M.**, & Kotzé, J. (2019). Early reading skills related to grade 1 english second language literacy in rural South African schools. South African Journal of Childhood Education, 9(1), a644. [https://doi.org/10.4102/sajce.v9i1.644](https://doi.org/10.4102/sajce.v9i1.644)
+**Schaefer, M.**, & Kotzé, J. (2019). Early reading skills related to grade 1 english second language literacy in rural South African schools. South African Journal of Childhood Education, 9(1), a644. [https://doi.org/10.4102/sajce.v9i1.644](https://doi.org/10.4102/sajce.v9i1.644) (open access)
 
 Bennett, W. G., **Diemer, M.**, Kerford, J., Probert, T., & Wesi, T. (2016). Setswana (South African). Journal of the International Phonetic Association, 46(2), 235–246. [https://doi.org/10.1017/S0025100316000050](https://doi.org/10.1017/S0025100316000050), [preprint version](https://sites.google.com/site/wmgbennett/papers)
 
@@ -47,4 +49,4 @@ Bennett, W. G., **Diemer, M.**, Kerford, J., Probert, T., & Wesi, T. (2016). Set
 
 # Reports
 
-Jukes, M., Pretorius, E., **Schaefer, M.**, Tjasink, K., Roper, M., Bisgard, J., Mabhena, N. (2020). Setting Reading Benchmarks in South Africa. Department of Basic Education: Pretoria. [pdf](https://pdf.usaid.gov/pdf_docs/PA00X1NZ.pdf) 
+Jukes, M., Pretorius, E., **Schaefer, M.**, Tjasink, K., Roper, M., Bisgard, J., Mabhena, N. (2020). Setting Reading Benchmarks in South Africa. Department of Basic Education: Pretoria. [open access pdf](https://pdf.usaid.gov/pdf_docs/PA00X1NZ.pdf) 
